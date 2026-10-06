@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="layout.css">
+    <title>Bucketlist</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <p><a href="index.html">THE AUTUMN EDIT</a></p>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="current" href="bucketlist.html">Bucketlist</a></li>
+                <li><a href="fashion.html">Fashion</a></li>
+            </ul>
+            <button class="burger" aria-label="Menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </nav>
+        <div class="search">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="7"></circle>
+                <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+            </svg>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="flex progress">
+            <p>Your progress 0 / 30 done</p>
+            <ul class="flex">
+                <li class="active">All</li>
+                <li>Cozy days</li>
+                <li>Food &amp; drinks</li>
+                <li>Outdoor</li>
+                <li>Selfcare</li>
+            </ul>
+        </div>
+
+        <div class="grid_1-1">
+            <div>
+                <p class="number">01</p>
+                <h2>Cozy days</h2>
+                <p>Slow, indoor moments</p>
+                <ul class="todo">
+                    <li><label><input type="checkbox"> Watch an old movie</label></li>
+                    <li><label><input type="checkbox"> Read a good book</label></li>
+                    <li><label><input type="checkbox"> Have a movie night</label></li>
+                    <li><label><input type="checkbox"> Light some candles</label></li>
+                    <li><label><input type="checkbox"> Do a puzzle</label></li>
+                    <li><label><input type="checkbox"> Knit or crochet something</label></li>
+                    <li><label><input type="checkbox"> Build a blanket fort</label></li>
+                    <li><label><input type="checkbox"> Write a letter by hand</label></li>
+                </ul>
+                <p>0 / 8 done</p>
+            </div>
+            <img src="./imgs/bucketlist/imgs1.jpg" alt="">
+        </div>
+
+        <div class="grid_1-1">
+            <div>
+                <p class="number">02</p>
+                <h2>Food &amp; drinks</h2>
+                <p>Recipes worth the mess</p>
+                <ul class="todo">
+                    <li><label><input type="checkbox"> Bake cinnamon rolls</label></li>
+                    <li><label><input type="checkbox"> Make a pumpkin spice latte</label></li>
+                    <li><label><input type="checkbox"> Cook an autumn soup</label></li>
+                    <li><label><input type="checkbox"> Try a new café</label></li>
+                    <li><label><input type="checkbox"> Bake an apple pie</label></li>
+                    <li><label><input type="checkbox"> Go apple picking</label></li>
+                    <li><label><input type="checkbox"> Host a cozy dinner</label></li>
+                </ul>
+                <p>0 / 7 done</p>
+            </div>
+            <img class="order" src="./imgs/bucketlist/imgs2.jpg" alt="">
+        </div>
+
+        <div class="grid_1-1">
+            <div>
+                <p class="number">03</p>
+                <h2>Outdoor</h2>
+                <p>Fresh air, falling leaves</p>
+                <ul class="todo">
+                    <li><label><input type="checkbox"> Go for a walk in the rain</label></li>
+                    <li><label><input type="checkbox"> Take a trip to the forest</label></li>
+                    <li><label><input type="checkbox"> Collect pretty autumn leaves</label></li>
+                    <li><label><input type="checkbox"> Watch the sunset</label></li>
+                    <li><label><input type="checkbox"> Visit a flea market</label></li>
+                    <li><label><input type="checkbox"> Have an autumn picnic</label></li>
+                    <li><label><input type="checkbox"> Visit a pumpkin patch</label></li>
+                    <li><label><input type="checkbox"> Photograph the autumn colors</label></li>
+                </ul>
+                <p>0 / 8 done</p>
+            </div>
+            <img src="./imgs/bucketlist/imgs3.jpg" alt="">
+        </div>
+
+        <div class="grid_1-1">
+            <div>
+                <p class="number">04</p>
+                <h2>Selfcare</h2>
+                <p>Slow down, on purpose</p>
+                <ul class="todo">
+                    <li><label><input type="checkbox"> Take a long bath</label></li>
+                    <li><label><input type="checkbox"> Do a face mask</label></li>
+                    <li><label><input type="checkbox"> Write in your journal</label></li>
+                    <li><label><input type="checkbox"> Turn off your phone for a few hours</label></li>
+                    <li><label><input type="checkbox"> Make a cozy playlist</label></li>
+                    <li><label><input type="checkbox"> Go to bed early</label></li>
+                    <li><label><input type="checkbox"> Stretch by the window</label></li>
+                </ul>
+                <p>0 / 7 done</p>
+            </div>
+            <img class="order" src="./imgs/bucketlist/imgs4.jpg" alt="">
+        </div>
+
+        <div class="cta">
+            <p class="label">ALL DONE?</p>
+            <h2>Save it, print it, share it</h2>
+            <p>Track what you've completed, or print the list for later. A small collection of ways to slow down this
+                season.</p>
+            <a href="#" id="download">DOWNLOAD PRINTABLE LIST</a>
+            <a href="https://www.instagram.com/explore/tags/theautumnedit/" target="_blank" rel="noopener">SHARE ON
+                INSTAGRAM</a>
+            <p>#theautumnedit</p>
+        </div>
+
+        <div class="grid_1-1-1-1 gallery">
+            <img src="./imgs/bucketlist/imgs5.jpg" alt="">
+            <img src="./imgs/bucketlist/imgs6.jpg" alt="">
+            <img src="./imgs/bucketlist/imgs7.jpg" alt="">
+            <img src="./imgs/bucketlist/imgs8.jpg" alt="">
+        </div>
+
+    </main>
+
+    <footer>
+        <p><a href="index.html">THE AUTUMN EDIT</a></p>
+        <a href="about.html">About</a>
+        <a href="mailto:hello@theautumnedit.dk">Contact</a>
+        <a href="https://www.instagram.com/karolinekc/" target="_blank" rel="noopener">Instagram</a>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+    <script src="bucketlist.js"></script>
+</body>
+
+</html>

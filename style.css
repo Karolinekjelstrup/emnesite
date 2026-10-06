@@ -1,0 +1,454 @@
+/*************** reset ****************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2b2b2b;
+}
+
+h1,
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 40px;
+  margin: 0 0 40px 0;
+}
+
+.label {
+  margin: 0 0 12px 0;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+}
+
+/*************** menu *****************/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+header p {
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+nav {
+  /********** desktop ***********/
+  display: flex;
+  align-items: center;
+
+  @media (width < 800px) {
+    /************ mobil *************/
+    .menu {
+      display: none;
+    }
+
+    &.active .menu {
+      display: block;
+      background-color: #ffffff;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 8px 0;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    &.active .menu li {
+      margin: 0 20px;
+    }
+
+    &.active .menu a {
+      padding: 14px 0;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-right: 20px;
+  }
+
+  li:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    display: block;
+    padding: 10px;
+    color: #333333;
+    text-decoration: none;
+    transition: color 0.3s;
+    text-align: end;
+    font-size: 14px;
+
+    &:hover {
+      color: #2b1c1c;
+    }
+  }
+}
+
+.menu a.current {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  display: none;
+
+  .line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333333;
+    margin-bottom: 5px;
+    transition: 0.2s linear;
+  }
+
+  @media (width < 800px) {
+    display: block;
+    background-color: transparent;
+    border: 0;
+
+    &.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+      transition: 0.2s linear;
+    }
+
+    &.active .line:nth-child(2) {
+      opacity: 0;
+      transition: 0.15s linear;
+    }
+
+    &.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+      transition: 0.2s linear;
+    }
+  }
+}
+
+/*************** hero *****************/
+
+.hero {
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 64px;
+}
+
+.hero p {
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+.hero a {
+  padding: 20px 50px;
+  background-color: #4a3219;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+
+.overlap {
+  text-align: center;
+}
+
+/*************** billedtekster ********/
+
+.overlap p,
+.grid_1-1-1-1 p {
+  margin: 12px 0 0 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  font-style: italic;
+}
+
+/*************** kategorier ***********/
+
+.categories li {
+  border-bottom: 1px solid #ddd;
+}
+
+.categories li p {
+  margin: 0;
+  font-size: 11px;
+}
+
+.categories li p:first-child {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+}
+
+.categories li a {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  color: inherit;
+  text-decoration: underline;
+}
+
+/*************** bucketlist ***********/
+
+.progress {
+  border-top: 1px solid #2b2b2b;
+  border-bottom: 1px solid #2b2b2b;
+}
+
+.progress p {
+  font-size: 14px;
+}
+
+.progress ul li {
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.progress ul li.active {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.number {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 48px;
+  line-height: 1;
+  color: #999;
+}
+
+.number + h2 {
+  margin-bottom: 8px;
+  font-size: 36px;
+}
+
+.number + h2::after {
+  background-color: #999;
+}
+
+.number + h2 + p {
+  margin-bottom: 24px;
+  font-size: 11px;
+}
+
+.todo li {
+  border-bottom: 1px solid #ddd;
+  font-size: 13px;
+}
+
+.todo input {
+  accent-color: #2b2b2b;
+}
+
+.todo + p {
+  margin-top: 16px;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #777;
+}
+
+/*************** afslutning ***********/
+
+.cta {
+  text-align: center;
+}
+
+.cta p:not(.label) {
+  font-size: 12px;
+}
+
+.cta a {
+  border: 1px solid #1a1a1a;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.cta a:first-of-type {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.cta a + p:not(.label) {
+  margin-top: 32px;
+  font-size: 11px;
+  color: #777;
+}
+
+/*************** fashion **************/
+
+.intro h1 {
+  margin-bottom: 16px;
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+.intro p:not(.label) {
+  max-width: 360px;
+  font-size: 13px;
+  color: #555;
+}
+
+.grid_1-1-1 h3 {
+  margin: 16px 0 6px 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.grid_1-1-1 p {
+  font-size: 12px;
+  color: #555;
+}
+
+.grid_1-1-1-1-1 p {
+  margin-top: 8px;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cocoa {
+  background-color: #45301f;
+}
+
+.olive {
+  background-color: #5c6a3f;
+}
+
+.charcoal {
+  background-color: #38383a;
+}
+
+.denim {
+  background-color: #5f7794;
+}
+
+.camel {
+  background-color: #c0a56e;
+}
+
+.featured h2 {
+  margin-bottom: 16px;
+}
+
+.featured p:not(.label) {
+  max-width: 360px;
+  margin-bottom: 28px;
+  font-size: 13px;
+  color: #555;
+}
+
+.featured a {
+  border: 1px solid #1a1a1a;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+/*************** about ****************/
+
+.about h1 {
+  margin-bottom: 24px;
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+.about p:not(.label) {
+  margin-bottom: 16px;
+  font-size: 15px;
+  color: #555;
+}
+
+/*************** bund *****************/
+
+footer {
+  border-top: 1px solid #ddd;
+}
+
+footer p {
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+footer a {
+  font-size: 14px;
+  color: inherit;
+  text-decoration: underline;
+}
+
+/*************** logo-link ************/
+
+header p a,
+footer p a {
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+
+/*************** mobil ****************/
+
+@media (max-width: 800px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .intro h1,
+  .about h1 {
+    font-size: 36px;
+  }
+
+  .number,
+  .number + h2 + p {
+    text-align: center;
+  }
+}

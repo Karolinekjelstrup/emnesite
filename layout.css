@@ -1,0 +1,442 @@
+/************** layout **************/
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* menu */
+header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search {
+  justify-self: end;
+  display: flex;
+}
+
+/* afsnit */
+main > div {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 40px;
+}
+
+/* hero */
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: calc(100vh - 94px);
+  max-width: none;
+  margin: 0;
+  padding: 0 0 140px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero h1 {
+  max-width: 400px;
+}
+
+.hero a {
+  margin-top: 32px;
+}
+
+.overlap {
+  position: relative;
+  margin-top: -100px;
+  padding: 0 40px 80px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overlap img {
+  width: 330px;
+}
+
+/* grid */
+.grid_1-1,
+.grid_1-1-1,
+.grid_1-1-1-1,
+.grid_1-1-1-1-1 {
+  display: grid;
+  gap: 20px;
+}
+
+.grid_1-1-1 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid_1-1-1-1 img,
+.grid_1-1-1-1-1 img,
+.grid_1-1-1 img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.flex {
+  display: flex;
+}
+
+.order {
+  order: -1;
+}
+
+/* de to overlappende billeder */
+.collage {
+  position: relative;
+  min-height: 550px;
+}
+
+.collage img:first-child {
+  width: 65%;
+  margin-left: auto;
+}
+
+.collage img:last-child {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+}
+
+/* bucketlist: fremgang og filtre */
+.progress {
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px auto 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.progress ul {
+  list-style: none;
+  gap: 8px;
+}
+
+/* bucketlist: kategorier */
+.grid_1-1 > img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.number + h2 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.number + h2::after {
+  content: "";
+  width: 80px;
+  height: 1px;
+}
+
+.todo {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todo li {
+  padding: 10px 0;
+}
+
+.todo label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.todo input {
+  width: 16px;
+  height: 16px;
+}
+
+/* bucketlist: afslutning */
+.cta p:not(.label) {
+  max-width: 420px;
+  margin: 0 auto 24px auto;
+}
+
+.cta a {
+  display: inline-block;
+  margin: 0 4px;
+  padding: 14px 28px;
+}
+
+.gallery {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+
+.gallery img {
+  aspect-ratio: 5 / 6;
+}
+
+/* skjul kategori når man filtrerer */
+.hide {
+  display: none;
+}
+
+/* fashion */
+.top {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.intro > img {
+  aspect-ratio: 4 / 3;
+}
+
+.row {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.row img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.cocoa,
+.olive,
+.charcoal,
+.denim,
+.camel {
+  height: 120px;
+}
+
+.featured a {
+  display: inline-block;
+  padding: 14px 28px;
+}
+
+/* about */
+.about {
+  max-width: 640px;
+}
+
+/* kategorier på forsiden */
+.categories {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categories li {
+  display: grid;
+  grid-template-columns: 50px 1fr 30px;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.categories li p:first-child {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.categories li a {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.categories li p:last-child {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.categories li::after {
+  content: "→";
+  grid-column: 3;
+  grid-row: 1 / 3;
+  justify-self: end;
+}
+
+/* bund */
+footer {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 30px 40px;
+}
+
+footer p {
+  margin: 0 auto 0 0;
+}
+
+/************** desktop **************/
+@media (min-width: 801px) {
+  .grid_1-1 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid_1-1:has(.number) {
+    align-items: center;
+    gap: 80px;
+  }
+
+  .intro,
+  .featured {
+    align-items: center;
+    gap: 80px;
+  }
+
+  .grid_1-1-1-1 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .grid_1-1-1-1-1 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+/************** mobil **************/
+@media (max-width: 800px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .grid_1-1-1-1,
+  .grid_1-1-1-1-1 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  main > div {
+    padding: 40px 20px;
+  }
+
+  .hero {
+    justify-content: flex-end;
+    padding: 0 0 130px 0;
+  }
+
+  .overlap {
+    padding: 0 20px 40px 20px;
+  }
+
+  .collage {
+    min-height: 400px;
+  }
+
+  .progress {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .progress ul {
+    flex-wrap: wrap;
+  }
+
+  .number + h2 {
+    justify-content: center;
+  }
+
+  .number + h2::after {
+    display: none;
+  }
+
+  .grid_1-1 > img {
+    order: -1;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .cta a {
+    display: block;
+    margin: 0 0 12px 0;
+  }
+
+  .top {
+    padding: 0;
+  }
+
+  header,
+  footer {
+    padding: 20px;
+  }
+
+  /* fashion: tekst først, så billede */
+  .intro > img,
+  .featured > img {
+    order: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  /* fashion: tre trends, 2 øverst og 1 i midten */
+  .grid_1-1-1:has(h3) {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .grid_1-1-1:has(h3) > div:nth-child(3) {
+    grid-column: 1 / -1;
+    width: calc(50% - 5px);
+    justify-self: center;
+  }
+
+  /* fashion: billedrække, 3 øverst og 2 i midten */
+  .grid_1-1-1-1-1:has(> img) {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    padding: 0 20px;
+  }
+
+  .grid_1-1-1-1-1 > img:nth-child(-n + 3) {
+    grid-column: span 2;
+  }
+
+  .grid_1-1-1-1-1 > img:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+
+  .grid_1-1-1-1-1 > img:nth-child(5) {
+    grid-column: 4 / span 2;
+  }
+
+  /* fashion: farver, 5 på en række */
+  .grid_1-1-1-1-1:has(> div) {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+}
