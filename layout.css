@@ -475,3 +475,11 @@ footer p {
     text-align: center;
   }
 }
+/* about: vis hele billedet i højt format (overskriver .intro > img og .grid_1-1 > img) */
+.intro > .about-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  align-self: start;
+}
