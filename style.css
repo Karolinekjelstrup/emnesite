@@ -254,7 +254,7 @@ nav {
   font-family: "Cormorant Garamond", serif;
   font-size: 48px;
   line-height: 1;
-  color: #999;
+  color: #767676;
 }
 
 .number + h2 {
@@ -285,7 +285,7 @@ nav {
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #777;
+  color: #666;
 }
 
 /*************** afslutning ***********/
@@ -315,7 +315,7 @@ nav {
 .cta a + p:not(.label) {
   margin-top: 32px;
   font-size: 11px;
-  color: #777;
+  color: #666;
 }
 
 /*************** fashion **************/
