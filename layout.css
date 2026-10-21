@@ -1,10 +1,4 @@
-/************** layout **************/
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* menu */
+/*************** menu ****************/
 header {
   position: relative;
   display: grid;
@@ -20,14 +14,14 @@ header {
   display: flex;
 }
 
-/* afsnit */
+/*************** afsnit ****************/
 main > div {
   max-width: 1200px;
   margin: 0 auto;
   padding: 50px 40px;
 }
 
-/* hero */
+/*************** hero ****************/
 .hero {
   position: relative;
   isolation: isolate;
@@ -72,7 +66,7 @@ main > div {
   width: 330px;
 }
 
-/* grid */
+/*************** grid ****************/
 .grid_1-1,
 .grid_1-1-1,
 .grid_1-1-1-1,
@@ -119,7 +113,7 @@ main > div {
   width: 50%;
 }
 
-/* bucketlist: fremgang og filtre */
+/*************** bucketlist: fremgang og filtre ****************/
 .progress {
   justify-content: space-between;
   align-items: center;
@@ -133,7 +127,7 @@ main > div {
   gap: 8px;
 }
 
-/* bucketlist: kategorier */
+/*************** bucketlist: kategorier ****************/
 .grid_1-1 > img {
   width: 100%;
   aspect-ratio: 4 / 5;
@@ -174,7 +168,7 @@ main > div {
   height: 16px;
 }
 
-/* bucketlist: afslutning */
+/*************** bucketlist: afslutning ****************/
 .cta p:not(.label) {
   max-width: 420px;
   margin: 0 auto 24px auto;
@@ -197,12 +191,12 @@ main > div {
   aspect-ratio: 5 / 6;
 }
 
-/* skjul kategori når man filtrerer */
+/*************** skjul kategori når man filtrerer ****************/
 .hide {
   display: none;
 }
 
-/* fashion */
+/*************** fashion ****************/
 .top {
   max-width: none;
   margin: 0;
@@ -240,12 +234,12 @@ main > div {
   padding: 14px 28px;
 }
 
-/* about */
+/*************** about ****************/
 .about {
   max-width: 640px;
 }
 
-/* kategorier på forsiden */
+/*************** kategorier på forsiden ****************/
 .categories {
   list-style: none;
   margin: 0;
@@ -281,7 +275,7 @@ main > div {
   justify-self: end;
 }
 
-/* bund */
+/*************** bund ****************/
 footer {
   display: flex;
   align-items: center;
