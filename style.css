@@ -186,7 +186,6 @@ nav {
 
 /*************** billedtekster ********/
 
-.overlap p,
 .grid_1-1-1-1 p {
   margin: 12px 0 0 0;
   font-family: "Cormorant Garamond", serif;
@@ -250,10 +249,6 @@ nav {
 .number + h2 {
   margin-bottom: 8px;
   font-size: 36px;
-}
-
-.number + h2::after {
-  background-color: #999;
 }
 
 .number + h2 + p {
